@@ -47,7 +47,7 @@ class Navigation extends Layer
 				height: @.height
 				x: (Screen.width / amount) * i
 				backgroundColor: null
-				name: "tab" + (i+1)
+				name: @tabNames[i].replace(/\s/g, '');
 				
 			tabs.push Navigation.tab
 
@@ -92,9 +92,3 @@ class Navigation extends Layer
 mainNavigationTabs = ["Home", "Dashboard", "House sit", "Messages"]
 
 mainNavigation = new Navigation(null, 3, mainNavigationTabs, tabIcons, tabIconWidths, tabIconHeights)
-
-# detailViewTabs = ["Location", "Calendar", "Messages"]
-# detailViewNavigation = new Navigation(null, 3, detailViewTabs)
-
-
-
